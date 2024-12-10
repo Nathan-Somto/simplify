@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root {
+    /* background-colors */
+    --primary: 114 92 247; /* rgb(114 92 247) */
+    --pale-primary: 234 233 254; /* rgb(234 233 254) */
+    --dark-primary: 67 34 183; /* rgb(67, 34, 183) */
+    --secondary: 255 255 255; /* rgb(255 255 255) */
+    --background: 255 255 255; /* rgb(255 255 255) */
+    --accent: 27 27 3; /* rgb(27 27 3) */
+    --neutral: 247 247 248; /* rgb(247 247 248) */
+    /* text colors */
+    --subtitle: 69 69 79; /* rgb(69 69 69) */
+    --foreground: 13 13 23; /* rgb(13 13 23) */
+    --primary-foreground: 255 255 255; /* rgb(255 255 255) */
+    --secondary-foreground: 39 39 49; /* rgb(39 39 49) */
+    --accent-foreground: 255 255 255; /* rgb(255 255 255) */
+  }
+  h1 {
+    @apply text-5xl font-semibold;
+  }
+  h2 {
+    @apply text-4xl leading-[44px] font-medium;
+  }
+  h3 {
+    @apply text-3xl font-medium;
+  }
+  h4 {
+    @apply text-2xl font-medium;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  * {
+    @apply scroll-smooth;
+  }
+  a {
+    @apply text-primary hover:text-dark-primary hover:underline;
+  }
+}
+@layer components {
+  .btn {
+    @apply flex items-center font-medium py-2.5 px-5 h-min rounded-lg cursor-pointer transition-colors ease-in-out delay-150 duration-200 justify-center;
+  }
+  .btn-primary {
+    @apply bg-primary text-primary-foreground border border-[rgb(81_72_231)] hover:bg-[rgb(81_72_231)] shadow-[rgb(3_3_13_/_0.03)_0px_1px_2px_0px_,_rgb(3_3_13_/_0.05)_0px_1px_3px_0px_,_rgb(255_255_255_/_0.3)_0px_1px_0px_1px_inset];
+  }
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground shadow-md border border-[rgb(201_201_210)] hover:border-[rgb(158_152_148)];
+  }
+  .btn-accent {
+    @apply bg-accent text-accent-foreground hover:opacity-80;
+  }
+  .card {
+    @apply bg-neutral rounded-lg h-min flex flex-col overflow-hidden p-8;
+  }
+  .section-container {
+    @apply pb-32  flex flex-col gap-y-24 px-4 py-24 min-[800px]:py-32 min-[800px]:px-6 max-w-[1200px] mx-auto items-center;
+  }
+}
+.instrument-sans {
+  font-family: "Instrument Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+.inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
