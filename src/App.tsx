@@ -1,4 +1,4 @@
-
+import { MotionConfig } from "framer-motion"
 import Navbar from "./components/nav-bar"
 import Contact from "./sections/Contact"
 import FAQ from "./sections/FAQ"
@@ -15,7 +15,9 @@ import WorksCarousel from "./sections/WorksCarousel"
 function App() {
 
   return (
-    <>
+    <MotionConfig
+      reducedMotion={"user"}
+    >
       <Navbar />
       <div
         id="hero-container"
@@ -33,7 +35,7 @@ function App() {
         <Contact />
         <Footer />
       </main>
-    </>
+    </MotionConfig>
   )
 }
 
