@@ -43,12 +43,19 @@ simplify
 7. `constants` - houses static data, this is kept away from the jsx as a preference to keep it clean
 8. `scripts` - some scripts written to scrape text from the design
 9. `hooks` - custom hooks used in the site.
-## Showcase
+
+## Screenshots
+
 ![hero](./screenshots/hero.png)
 ![works](./screenshots/works.png)
 ![testimonials](./screenshots/testimonials.png)
 
-[View live demo](https://example.com)
+## Video Preview
 
+<video controls autoplay width='100%' height='100%'>
+<source src='./screenshots/simplify-preview.mp4' type='video/mp4'>
+</video>
+
+[View live demo](https://example.com)
 
 Please Leave a :star: if you liked it :smile:.
