@@ -1,10 +1,10 @@
-import {features as items} from '@/constants'
-import SlideUp from '@/animation/slide-up'
-import StaggeredSlideUp from '@/animation/staggered-slide-up'
+import { features as items } from '@/constants'
+import SlideUp from '@/animations/slide-up'
+import StaggeredSlideUp from '@/animations/staggered-slide-up'
 import { motion } from 'framer-motion'
 export default function Features() {
     //const textVariant
-   
+
     return (
         <section id="features" className="bg-secondary section-container">
             <div className='flex flex-col gap-y-8 w-full flex-1 overflow-hidden  min-[800px]:flex-row  min-[800px]:gap-x-24   '>
@@ -38,6 +38,7 @@ export default function Features() {
                         variants={parentVariant}
                         initial={initial}
                         whileInView={animate}
+                        viewport={{once: true}}
                         className='flex gap-6 w-full min-[800px]:w-auto flex-1 min-[800px]:flex-row flex-col'>
                         {
                             items.map(item => (

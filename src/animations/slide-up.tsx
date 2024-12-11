@@ -17,11 +17,18 @@ export default function SlideUp({ children, delay, duration, easing, initialY, c
                 y: initialY || 100,
                 opacity: initialOpacity || 0
             }}
-            whileInView={{ y: 0, opacity: 1 }}
+            whileInView={{ 
+                y: 0, 
+                opacity: 1 
+            }}
             transition={{
                 duration: duration || 0.8,
                 delay: delay || 0,
                 ease: easing || [0.6, -0.05, 0.01, 0.99]
+            }}
+            viewport={{
+                amount: 'some',
+                once: true
             }}
             className={`${className ?? 'w-fit  h-fit'}`}
         >

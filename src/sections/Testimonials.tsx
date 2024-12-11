@@ -2,7 +2,7 @@ import { testimonials as data } from '@/constants'
 import SectionHeader from '@/components/section-header'
 import Carousel from '@/components/carousel'
 import TestimonialCard from '@/components/testimonial-card'
-import SlideUp from '@/animation/slide-up'
+import SlideUp from '@/animations/slide-up'
 export default function Testimonials() {
     return (
         <section id="testimonials" className="section-container bg-neutral overflow-x-hidden">

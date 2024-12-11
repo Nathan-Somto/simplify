@@ -1,4 +1,4 @@
-import SlideUp from '@/animation/slide-up'
+import SlideUp from '@/animations/slide-up'
 import UserLoop from '@/assets/user-loop.svg'
 import DarkBadge from '@/components/dark-badge'
 import SectionHeader from '@/components/section-header'

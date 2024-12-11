@@ -3,7 +3,7 @@ import { works } from '@/constants'
 import React from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import Arrow from '@/assets/up-right-arrow.svg'
-import SlideUp from '@/animation/slide-up'
+import SlideUp from '@/animations/slide-up'
 export default function RecentWork() {
     const [hoverIndex, setHoverIndex] = React.useState<number | null>(null);
     return (
@@ -35,40 +35,40 @@ export default function RecentWork() {
                                                 : 'min-[800px]:col-span-2'
                                 }`}
                         >
-                        <motion.figure
-                            
-                            onMouseEnter={() => {
-                                setHoverIndex(index)
-                            }}
-                            onMouseLeave={() => {
-                                setHoverIndex(null)
-                            }}
-                            className='h-full w-full'
-                            >
-                            <img src={item.src} alt={item.alt} className='h-full w-full object-cover' />
-                            <AnimatePresence>
-                                {hoverIndex === index && (
-                                    <motion.div
-                                        initial={{ opacity: 0 }}
-                                        animate={{ opacity: 1 }}
-                                        exit={{ opacity: 0 }}
-                                        className='absolute inset-0 flex items-center justify-center bg-secondary/25 '>
-                                        <motion.div
-                                            initial={{ y: 20, opacity: 0 }}
-                                            animate={{ y: 0, opacity: 1 }}
-                                            exit={{ y: 20, opacity: 0 }}
-                                            className='bg-secondary rounded-md size-8 grid place-items-center absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 '>
-                                            <motion.img
+                            <motion.figure
 
-                                                src={Arrow}
-                                                alt='up right arrow'
-                                                className='size-5'
-                                            />
+                                onMouseEnter={() => {
+                                    setHoverIndex(index)
+                                }}
+                                onMouseLeave={() => {
+                                    setHoverIndex(null)
+                                }}
+                                className='h-full w-full'
+                            >
+                                <img src={item.src} alt={item.alt} className='h-full w-full object-cover' />
+                                <AnimatePresence>
+                                    {hoverIndex === index && (
+                                        <motion.div
+                                            initial={{ opacity: 0 }}
+                                            animate={{ opacity: 1 }}
+                                            exit={{ opacity: 0 }}
+                                            className='absolute inset-0 flex items-center justify-center bg-secondary/25 '>
+                                            <motion.div
+                                                initial={{ y: 20, opacity: 0 }}
+                                                animate={{ y: 0, opacity: 1 }}
+                                                exit={{ y: 20, opacity: 0 }}
+                                                className='bg-secondary rounded-md size-8 grid place-items-center absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 '>
+                                                <motion.img
+
+                                                    src={Arrow}
+                                                    alt='up right arrow'
+                                                    className='size-5'
+                                                />
+                                            </motion.div>
                                         </motion.div>
-                                    </motion.div>
-                                )}
-                            </AnimatePresence>
-                        </motion.figure>
+                                    )}
+                                </AnimatePresence>
+                            </motion.figure>
                         </SlideUp>
                     )
                 }

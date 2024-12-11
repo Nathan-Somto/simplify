@@ -2,7 +2,7 @@ import SectionHeader from '@/components/section-header'
 import PricingCard from '@/components/pricing-card'
 import { pricing as data } from '@/constants'
 import { motion } from 'framer-motion'
-import StaggeredSlideUp from '@/animation/staggered-slide-up'
+import StaggeredSlideUp from '@/animations/staggered-slide-up'
 export default function Pricing() {
     return (
         <section id="pricing" className='section-container'>
@@ -16,12 +16,13 @@ export default function Pricing() {
             <StaggeredSlideUp
                 stagger={0.213}
                 delay={0.2}
-                
+
                 renderChildren={({ parentVariant, childVariant, animate, initial }) => (
                     <motion.div
                         variants={parentVariant}
                         initial={initial}
                         whileInView={animate}
+                        viewport={{ once: true }}
                         className='grid lg:grid-cols-3 gap-5'>
                         {
                             data.map((item, index) => (

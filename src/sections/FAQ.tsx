@@ -1,4 +1,4 @@
-import StaggeredSlideUp from '@/animation/staggered-slide-up'
+import StaggeredSlideUp from '@/animations/staggered-slide-up'
 import SectionHeader from '@/components/section-header'
 import { faqs } from '@/constants'
 import { motion } from 'framer-motion'
@@ -21,6 +21,7 @@ export default function FAQ() {
                     <motion.div
                         variants={parentVariant}
                         initial={initial}
+                        viewport={{ once: true }}
                         whileInView={animate}
                         className='grid min-[800px]:grid-cols-3 gap-8 item-center'>
                         {faqs.map(item => (
