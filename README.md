@@ -50,12 +50,6 @@ simplify
 ![works](./screenshots/works.png)
 ![testimonials](./screenshots/testimonials.png)
 
-## Video Preview
-
-<video controls autoplay width='100%' height='100%'>
-<source src='./screenshots/simplify-preview.mp4' type='video/mp4'>
-</video>
-
 [View live demo](https://example.com)
 
 Please Leave a :star: if you liked it :smile:.
